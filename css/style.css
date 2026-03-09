@@ -4,8 +4,9 @@
         display: grid;
         height: 100vh;  
         margin: 0;
-        grid-template-columns:40vh 60vh ;
-        grid-template-rows:40px 20px 100px 20px ;
+        background-color: blue;
+        grid-template-columns:40vh 60vh;
+        grid-template-rows:100px 40px 500px 40px;
         grid-template-areas: 
         'hd na na'
         'as as as'
@@ -16,16 +17,21 @@
     header{
         display: flex;
         grid-area: hd;
+        background-color: white;
+        border: 1px solid lightskyblue;
     }
 
     nav {
         display: flex;
         grid-area: na;
+        background-color: white;
+        border: 1px solid lightskyblue;
     }
     
     aside {
         display: flex;
         grid-area: as;
+        border: 1px solid lightskyblue;
     }
 
     main {
@@ -39,13 +45,14 @@
     }
 }
 
-@media screen and (mi-width: 600px){
+@media screen and (min-width: 600px){
     body {
         display: grid;
         height: 100vh;  
         margin: 0;
-        grid-template-columns:40vh 60vh ;
-        grid-template-rows:40px 20px 100px 20px ;
+        background-color: blue;
+        grid-template-columns:40vh 60vh;
+        grid-template-rows:100px 40px 480px 45px;
         grid-template-areas: 
         'hd na na'
         'as as as'
@@ -53,29 +60,40 @@
         'ft ft ft'
     }
 
-    
     header{
         display: flex;
         grid-area: hd;
+        background-color: white;
+        border: 1px solid lightskyblue;
+        align-items: center;
+        justify-content: center;
     }
 
     nav {
         display: flex;
         grid-area: na;
+        background-color: white;
+        border: 1px solid lightskyblue;
     }
     
     aside {
         display: flex;
         grid-area: as;
+        border: 1px solid lightskyblue;
+        background-color: white;
     }
 
     main {
         display: flex;
         grid-area: mn;
+        background-color: white;
+        border: 1px solid lightskyblue;
     }
 
     footer {
         display: flex;
         grid-area: ft;
+        background-color: white;
+        border: 1px solid lightskyblue;
     }
 }
