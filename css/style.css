@@ -220,6 +220,165 @@
     }
 }
 
+body.kundvagn {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    background-color: blue;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 40px auto auto auto;
+    grid-template-areas:
+    'hd'
+    'na'
+    'sec'
+    'mn'
+    'as'
+    'ft'
+}
+
+body.kundvagn header {
+    display: flex;
+    grid-area: hd;
+    border: 1px solid lightskyblue;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    background-color: lightskyblue;
+}
+
+body.kundvagn nav {
+    display: flex;
+    grid-area: na;
+    background-color: lightskyblue;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: small;
+    font-family: cursive;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 0 8px;
+}
+
+body.kundvagn section {
+    display: flex;
+    grid-area: sec;
+    background-color: white;
+    border: 1px solid black;
+    align-items: center;
+    justify-content: center;
+    font-size: large;
+    padding: 10px;
+}
+
+body.kundvagn main {
+    display: flex;
+    grid-area: mn;
+    flex-wrap: wrap;
+    background-color: white;
+    justify-content: center;
+    position: relative;
+    padding-top: 10px;
+}
+
+body.kundvagn aside {
+    display: flex;
+    grid-area: as;
+    background-color: white;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.betalnings-info {
+    width: 100%;
+    max-width: 400px;
+}
+
+.betalnings-info h2 {
+    margin: 0 0 12px 0;
+    font-size: large;
+    border-bottom: 2px solid lightskyblue;
+    padding-bottom: 6px;
+}
+
+.betalnings-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.betalnings-form label {
+    font-size: small;
+    font-weight: bold;
+    color: #333;
+}
+
+.betalnings-form input {
+    padding: 6px 10px;
+    border: 2px solid blue;
+    border-radius: 8px;
+    font-size: medium;
+    outline: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.betalnings-form input:focus {
+    border-color: lightskyblue;
+}
+
+.kort {
+    display: flex;
+    gap: 12px;
+}
+
+.kort > div {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.totalt {
+    display: flex;
+    justify-content: space-between;
+    font-weight: bold;
+    font-size: large;
+    padding: 8px 0;
+    border-top: 2px solid lightskyblue;
+    margin-top: 4px;
+}
+
+.betala-btn {
+    background-color: blue;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: large;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+.betala-btn:hover {
+    background-color: lightskyblue;
+}
+
+body.kundvagn footer {
+    display: flex;
+    grid-area: ft;
+    border: 1px solid black;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: medium;
+    background-color: lightskyblue;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 @media screen and (min-width: 600px){
     body.hem {
         display: grid;
@@ -586,6 +745,77 @@
     }
 
     body.kundvagn footer {
+        display: flex;
+        grid-area:ft;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: x-large;
+        background-color: lightskyblue;
+    }
+
+
+    body.produkter {
+        display: grid;
+        height: 100vh;  
+        margin: 0;
+        background-color: blue;
+        grid-template-columns:40vh 60vh;
+        grid-template-rows:100px 200px 200px auto 45px;
+        grid-template-areas: 
+        'hd na na'
+        'mn mn mn'
+        'sec sec sec'
+        'as as as'
+        'ft ft ft'
+    }
+
+    body.produkter header {
+        display: flex;
+        grid-area:hd;
+        border: 1px solid lightskyblue;
+        align-items: center;
+        justify-content: center;
+        font-size: xx-large;
+        background-color: lightskyblue;
+    }
+
+    body.produkter nav {
+        display: flex;
+        grid-area:na;
+        font-family: cursive;
+        border: 1px solid lightskyblue;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: x-large;
+        background-color: lightskyblue;
+    }
+
+    body.produkter main {
+        display: flex;
+        grid-area:mn;
+        flex-wrap: wrap;
+        background-color: white;
+        border: 1px solid black;
+        justify-content: center;
+        position: relative;
+    }
+
+    body.produkter section {
+        display: flex;
+        grid-area:sec;
+        background-color: white;
+    }
+
+    body.produkter aside {
+        display: flex;
+        grid-area:as;
+        background-color: white;
+        border: 1px solid black;
+    }
+
+    body.produkter footer {
         display: flex;
         grid-area:ft;
         justify-content: center;
