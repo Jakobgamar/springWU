@@ -379,6 +379,135 @@ body.kundvagn footer {
     gap: 8px;
 }
 
+body.produkter {
+    display: grid;
+    min-height: 100vh;
+    margin: 0;
+    background-color: blue;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 40px auto auto auto auto;
+    grid-template-areas:
+    'hd'
+    'na'
+    'mn'
+    'sec'
+    'as'
+    'ft'
+}
+
+body.produkter header {
+    display: flex;
+    grid-area: hd;
+    border: 1px solid lightskyblue;
+    align-items: center;
+    justify-content: center;
+    font-size: x-large;
+    background-color: lightskyblue;
+}
+
+body.produkter nav {
+    display: flex;
+    grid-area: na;
+    background-color: lightskyblue;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: small;
+    font-family: cursive;
+    overflow-x: auto;
+    gap: 8px;
+    padding: 0 8px;
+}
+
+body.produkter main {
+    display: flex;
+    grid-area: mn;
+    flex-wrap: wrap;
+    background-color: white;
+    border: 1px solid black;
+    justify-content: center;
+    position: relative;
+}
+
+body.produkter main img {
+    width: calc(50% - 16px);
+    height: 130px;
+    object-fit: cover;
+    margin: 8px;
+    border-radius: 10px;
+    border: 2px solid blue;
+}
+
+body.produkter section {
+    display: flex;
+    grid-area: sec;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.produkt-info {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 10px;
+    width: 100%;
+}
+
+.produkt-info h2 {
+    margin: 0;
+    font-size: x-large;
+    border-bottom: 2px solid lightskyblue;
+    padding-bottom: 6px;
+}
+
+.produkt-info p {
+    margin: 0;
+    font-size: medium;
+    color: #333;
+}
+
+.pris {
+    font-size: x-large;
+    font-weight: bold;
+    color: blue;
+}
+
+body.produkter aside {
+    display: flex;
+    grid-area: as;
+    background-color: white;
+    border: 1px solid black;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+
+.lagg-i-vagn-btn {
+    background-color: blue;
+    padding: 14px 32px;
+    border-radius: 10px;
+    font-size: large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.lagg-i-vagn-btn:hover {
+    background-color: lightskyblue;
+}
+
+body.produkter footer {
+    display: flex;
+    grid-area: ft;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: medium;
+    background-color: lightskyblue;
+    padding: 10px 0;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
 @media screen and (min-width: 600px){
     body.hem {
         display: grid;
@@ -761,7 +890,7 @@ body.kundvagn footer {
         margin: 0;
         background-color: blue;
         grid-template-columns:40vh 60vh;
-        grid-template-rows:100px 200px 200px auto 45px;
+        grid-template-rows:100px 270px 170px auto 45px;
         grid-template-areas: 
         'hd na na'
         'mn mn mn'
@@ -802,17 +931,71 @@ body.kundvagn footer {
         position: relative;
     }
 
+    body.produkter main img {
+        width: calc(33% - 20px);
+        height: 180px;
+        object-fit: cover;
+        margin: 10px;
+        border-radius: 10px;
+        border: 2px solid blue;
+    }
+
     body.produkter section {
         display: flex;
         grid-area:sec;
         background-color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .produkt-info {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding: 16px;
+        max-width: 500px;
+        width: 100%;
+    }
+    
+    .produkt-info h2 {
+        margin: 0;
+        font-size: xx-large;
+        border-bottom: 2px solid lightskyblue;
+        padding-bottom: 8px;
+    }
+    
+    .produkt-info p {
+        margin: 0;
+        font-size: large;
+        color: #333;
+    }
+    
+    .pris {
+        font-size: xx-large;
+        font-weight: bold;
+        color: blue;
     }
 
     body.produkter aside {
         display: flex;
-        grid-area:as;
+        grid-area: as;
         background-color: white;
         border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .lagg-i-vagn-btn {
+        background-color: blue;
+        padding: 18px 40px;
+        border-radius: 10px;
+        font-size: x-large;
+        font-weight: bold;
+        text-decoration: none;
+    }
+    
+    .lagg-i-vagn-btn:hover {
+        background-color: lightskyblue;
     }
 
     body.produkter footer {
