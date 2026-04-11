@@ -483,7 +483,7 @@ body.produkter aside {
     padding: 16px;
 }
 
-.lagg-i-vagn-btn {
+.lägg-i-vagn-btn {
     background-color: blue;
     padding: 14px 32px;
     border-radius: 10px;
@@ -492,7 +492,7 @@ body.produkter aside {
     text-decoration: none;
 }
 
-.lagg-i-vagn-btn:hover {
+.lägg-i-vagn-btn:hover {
     background-color: lightskyblue;
 }
 
@@ -890,7 +890,7 @@ body.produkter footer {
         margin: 0;
         background-color: blue;
         grid-template-columns:40vh 60vh;
-        grid-template-rows:100px 270px 170px auto 45px;
+        grid-template-rows:100px 270px 170px 80px 45px;
         grid-template-areas: 
         'hd na na'
         'mn mn mn'
@@ -985,7 +985,7 @@ body.produkter footer {
         align-items: center;
     }
     
-    .lagg-i-vagn-btn {
+    .lägg-i-vagn-btn {
         background-color: blue;
         padding: 18px 40px;
         border-radius: 10px;
@@ -994,7 +994,7 @@ body.produkter footer {
         text-decoration: none;
     }
     
-    .lagg-i-vagn-btn:hover {
+    .lägg-i-vagn-btn:hover {
         background-color: lightskyblue;
     }
 
@@ -1008,5 +1008,101 @@ body.produkter footer {
         background-color: lightskyblue;
     }
 
+
+    body.dinaprodukter {
+        display: grid;
+        height: 100vh;  
+        margin: 0;
+        background-color: blue;
+        grid-template-columns:40vh 60vh;
+        grid-template-rows:100px 270px 170px 80px 45px;
+        grid-template-areas: 
+        'hd na na'
+        'mn mn mn'
+        'sec sec sec'
+        'as as as'
+        'ft ft ft'
+    }
+
+    body.dinaprodukter header {
+        display: flex;
+        grid-area:hd;
+        border: 1px solid lightskyblue;
+        align-items: center;
+        justify-content: center;
+        font-size: xx-large;
+        background-color: lightskyblue;
+    }
+
+    body.dinaprodukter nav {
+        display: flex;
+        grid-area:na;
+        font-family: cursive;
+        border: 1px solid lightskyblue;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: x-large;
+        background-color: lightskyblue;
+    }
+
+    body.dinaprodukter main {
+        display: flex;
+        grid-area:mn;
+        flex-wrap: wrap;
+        background-color: white;
+        border: 1px solid black;
+        justify-content: center;
+        position: relative;
+    }
+
+    body.dinaprodukter main img {
+        width: calc(33% - 20px);
+        height: 180px;
+        object-fit: cover;
+        margin: 10px;
+        border-radius: 10px;
+        border: 2px solid blue;
+    }
+
+    body.dinaprodukter section {
+        display: flex;
+        grid-area:sec;
+        background-color: white;
+        justify-content: center;
+        align-items: center;
+    }
+
+    body.dinaprodukter aside {
+        display: flex;
+        grid-area: as;
+        background-color: white;
+        border: 1px solid black;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .lista-prod-btn {
+        background-color: blue;
+        padding: 18px 40px;
+        border-radius: 10px;
+        font-size: x-large;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .lista-prod-btn:hover {
+        background-color: lightskyblue;
+    }
+
+    body.dinaprodukter footer {
+        display: flex;
+        grid-area:ft;
+        justify-content: center;
+        justify-content: space-evenly;
+        align-items: center;
+        font-size: x-large;
+        background-color: lightskyblue;
+    }
 
 }
